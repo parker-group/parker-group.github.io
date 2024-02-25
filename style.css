@@ -81,3 +81,26 @@ nav ul li a:hover {
 .profile-info h3 {
     margin-top: 10px;
 }
+
+.publications h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.publications ul {
+    list-style-type: none; /* Removes the default list bullet points */
+    padding: 0;
+}
+
+.publications li p {
+    margin-bottom: 15px; /* Adds space between each publication entry */
+}
+
+.publications li p a {
+    color: darkblue; /* Styles the DOI links */
+    text-decoration: none; /* Optional: removes the underline from links */
+}
+
+.publications li p a:hover {
+    text-decoration: underline; /* Adds an underline on hover for better link visibility */
+}
