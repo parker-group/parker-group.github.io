@@ -93,12 +93,13 @@ nav ul li a:hover {
 }
 
 .publications li p {
-    margin-bottom: 15px; /* Adds space between each publication entry */
+    margin-left: 20px; /* Adjusts indentation from left */
+	margin-bottom: 10px; /* Adds space between each publication entry */
 }
 
 .publications li p a {
     color: darkblue; /* Styles the DOI links */
-    text-decoration: none; /* Optional: removes the underline from links */
+    /*text-decoration: none; /* Optional: removes the underline from links */
 }
 
 .publications li p a:hover {
