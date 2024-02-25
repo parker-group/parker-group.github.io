@@ -1,6 +1,59 @@
 
-body { font-family: Arial, sans-serif; }
-header, nav, footer { text-align: center; padding: 1em; }
-nav ul { list-style-type: none; padding: 0; }
-nav ul li { display: inline; margin: 0 10px; }
-nav ul li a { text-decoration: none; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    position: relative; /* Needed for absolute positioning of the contact panel */
+    min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+}
+
+header {
+    text-align: center;
+    padding: 1em;
+    background-image: url('C:\Users\salem\DMParker1.github.io\'20160911_170449.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Reset the margin for ul */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit; /* Make the anchor tags use the current color */
+}
+
+.contact-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7); /* Adjust transparency as needed */
+    color: white;
+    padding: 20px;
+    text-align: left; /* Align text to the left within the contact panel */
+}
+
+.contact-panel p {
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: bold; /* Makes text bold */
+    margin: 10px 0; /* Add some space between the lines */
+}
+
+/* Additional styles for the footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    position: relative; /* To make sure it stays at the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
