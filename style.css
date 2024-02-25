@@ -8,12 +8,14 @@ body {
 
 header {
     text-align: center;
-    padding: 1em;
-    background-image: url('images/'20160911_170449.jpg'); /* Path to your image */
-    background-size: cover;
-    background-position: center; /* Center the background image */
+    background-image: url('images/20160911_170449.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* This will make sure the entire image fits */
+    background-attachment: fixed; /* Optional: this will make the background fixed relative to the viewport */
     color: white;
 }
+
 
 nav ul {
     list-style-type: none;
