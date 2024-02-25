@@ -15,8 +15,11 @@ header {
 }
 
 header h1 {
-    /* Existing styles */
+    font-weight: bold;
+    font-size: 3em; /* Adjust this value to increase or decrease the text size */
+    color: white; /* Ensures the text is white */
 }
+
 
 .what-we-do {
     padding: 20px; /* Increased padding for visual space */
