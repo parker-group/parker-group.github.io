@@ -5,44 +5,37 @@ body {
 }
 
 header {
-    background-image: url('images/20160911_170449.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    color: white;
-    padding: 100px 0; /* Adjust the padding to fit your image and text nicely */
+    /* Existing styles */
 }
 
 header h1 {
-    font-weight: bold;
-    font-size: 2.5em; /* Adjust size as needed */
+    /* Existing styles */
 }
 
 .what-we-do {
-    padding: 20px; /* Increased padding for better spacing */
-    background-color: #f5f5f5; /* Light grey background, or choose your own color */
-    margin-bottom: 150px; /* Add space below the section to prevent overlap with the profile info */
+    padding: 20px; /* Increased padding for visual space */
+    background-color: #f5f5f5;
+    margin-bottom: 150px; /* Increased bottom margin */
 }
 
 .what-we-do h2 {
-    font-size: 2em; /* Adjust size as needed */
+    /* Existing styles */
 }
 
 .profile-info {
     position: absolute;
-    bottom: 50px; /* Increased distance from the bottom */
+    bottom: 20px; /* Adjusted */
     left: 0;
     background-color: white;
     padding: 20px;
-    width: 300px; /* Adjust width as needed */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a shadow to the profile box */
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .profile-info img {
-    width: 100px; /* Resize the image to be smaller */
-    height: auto; /* Keep the image's aspect ratio */
-    border-radius: 50%; /* Makes the image round */
+    width: 100px; /* Adjusted size */
+    height: auto;
+    border-radius: 50%;
 }
 
 .profile-info h3 {
