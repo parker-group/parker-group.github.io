@@ -9,7 +9,7 @@ body {
 header {
     text-align: center;
     padding: 1em;
-    background-image: url('C:\Users\salem\DMParker1.github.io\'20160911_170449.jpg'); /* Path to your image */
+    background-image: url('C:/Users/salem/DMParker1.github.io/'20160911_170449.jpg'); /* Path to your image */
     background-size: cover;
     background-position: center; /* Center the background image */
     color: white;
