@@ -5,7 +5,13 @@ body {
 }
 
 header {
-    /* Existing styles */
+    background-image: url('images/20160911_170449.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 0; /* Adjust the padding to fit your image and text nicely */
 }
 
 header h1 {
