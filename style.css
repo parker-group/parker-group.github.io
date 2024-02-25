@@ -8,19 +8,18 @@ header {
     background-image: url('images/20160911_170449.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: relative; /*previously this was 'center' */
+    background-position: center; /* Changed back to 'center' for better alignment */
     text-align: center;
     color: white;
-    padding: 100px 0; /* Adjust the padding to fit your image and text nicely */
+    padding: 100px 0;
 }
 
 header h1 {
     font-weight: bold;
-    font-size: 3em; /* Adjust this value to increase or decrease the text size */
-    color: white; /* Ensures the text is white */
+    font-size: 3em;
+    color: white;
 }
 
-/* Style for the nav */
 nav {
     position: absolute;
     top: 0;
@@ -42,7 +41,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: darkblue; /* Dark blue text color */
+    color: darkblue;
     font-weight: bold;
 }
 
@@ -56,52 +55,64 @@ nav ul li a:hover {
     margin: 0 auto;
     width: 60%;
     max-width: 800px;
-    text-align: center; /* Centers the text inside the section */
-}
-
-
-.what-we-do h2 {
-    /* Existing styles */
+    text-align: center;
 }
 
 .profile-info {
-    /* Keep it relative to ensure it flows with the document or consider another strategy for layout */
     padding: 20px;
-    width: 300px; /* Or whatever width suits your design */
+    width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: 20px; /* Adds some space between this section and whatever is above it */
+    margin-top: 20px;
 }
 
 .profile-info img {
-    width: 80px; /* Smaller profile image */
+    width: 80px;
     height: auto;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%;
 }
 
 .profile-info h3 {
     margin-top: 10px;
 }
 
-.publications h2 {
+.publications {
+    margin-left: 30px;
     margin-top: 20px;
+}
+
+.publications h2 {
     font-size: 1.5em;
+    color: green;
 }
 
 .publications ul {
-    list-style-type: none; /* Removes the default list bullet points */
+    list-style-type: none;
     padding: 0;
 }
 
-.publications li p {
-    margin-left: 20px; /* Adjusts indentation from left */
-	margin-bottom: 10px; /* Adds space between each publication entry */
+.publications li {
+    margin-bottom: 10px;
 }
 
-.publications li p a {
-    color: darkblue; /* Styles the DOI links */
-    /*text-decoration: none; /* Optional: removes the underline from links */
+.publications li .publication {
+    display: flex;
+    align-items: center;
 }
 
-.publications li p a:hover {
-    text-decoration: underline; /* Adds an underline on hover for better link visibility */
+.publications li .publication p {
+    margin-right: 20px;
+}
+
+.publications li .publication a {
+    color: darkblue;
+}
+
+.publications li .publication a:hover {
+    text-decoration: underline;
+}
+
+.altmetric-embed, .__dimensions_badge_embed__, .plumx-plum-print-popup {
+    transform: scale(0.8);
+    transform-origin: left;
+    margin-left: 10px; /* Ensure badges are not too close to the text */
 }
