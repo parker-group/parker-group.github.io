@@ -29,19 +29,17 @@ header h1 {
 }
 
 .profile-info {
-    position: absolute;
-    bottom: 20px; /* Adjusted */
-    left: 0;
-    background-color: white;
+    /* Keep it relative to ensure it flows with the document or consider another strategy for layout */
     padding: 20px;
-    width: 300px;
+    width: 300px; /* Or whatever width suits your design */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px; /* Adds some space between this section and whatever is above it */
 }
 
 .profile-info img {
-    width: 100px; /* Adjusted size */
+    width: 80px; /* Smaller profile image */
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Circular image */
 }
 
 .profile-info h3 {
