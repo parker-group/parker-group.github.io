@@ -15,6 +15,7 @@ header {
     color: white;
     padding: 100px 0;
 }
+
 @media (max-width: 768px) {
     header {
         background-size: contain; /* or any other adjustments */
@@ -189,4 +190,14 @@ nav ul li a:hover {
 
 .team-member-info p {
     text-align: justify; /* Optional: Justifies the text for better readability */
+}
+
+.people-header {
+    background-image: url('images/P_20170218_092844.jpg'); /* Update with the correct path */
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+	text-align: center;
+    padding: 100px 0;
 }
