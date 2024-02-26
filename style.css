@@ -1,4 +1,5 @@
 body {
+	position: relative;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -69,22 +70,34 @@ nav ul li a:hover {
 }
 
 .profile-info {
-    display: flex; /* Corrected typo */
+    display: flex; 
     align-items: center;
-    padding: 20px;
+    padding: 2px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 800px; /* Control the maximum width */
-    margin-top: 20px;
-    margin-left: 20px; /* Align to bottom left */
+    width: auto;
+	max-width: 660px; /* Control the maximum width */
+    margin: 5px;
     background: #f5f5f5; /* Optional: adds a background color */
+	position: relative; 
+	bottom: 0;
+	left: 0;
 }
 
 .profile-info img {
     width: 180px; /* Adjust if still too large */
     height: 180px;
-    border-radius: 50%;
+    border-radius: 1%;
     object-fit: cover;
     margin-right: 20px;
+}
+
+.emblem {
+    width: 300px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; 
+    bottom: 2px; /* Distance from bottom */
+    right: 2px; /* Distance from right, adjust as needed */
+	z-index: 10; /* Ensure it's above other content */
 }
 
 .info-text {
