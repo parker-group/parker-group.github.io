@@ -5,15 +5,20 @@ body {
 }
 
 header {
-    background-image: url('images/20160911_170449.jpg');
+    background-image: url('images/20160815_153940.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; /* Changed back to 'center' for better alignment */
+    background-position: center; 
+/*	background-attachment: fixed; /*this makes the background image stay fixed while you scroll */
     text-align: center;
     color: white;
     padding: 100px 0;
 }
-
+@media (max-width: 768px) {
+    header {
+        background-size: contain; /* or any other adjustments */
+    }
+}
 header h1 {
     font-weight: bold;
     font-size: 3em;
@@ -55,24 +60,52 @@ nav ul li a:hover {
     margin: 0 auto;
     width: 60%;
     max-width: 800px;
-    text-align: center;
+    text-align: left;
+}
+
+.what-we-do p {
+    margin-bottom: 1em; /* Adds space between paragraphs */
+    text-align: justify; /* Justifies the text for better readability, optional */
 }
 
 .profile-info {
+    display: flex; /* Corrected typo */
+    align-items: center;
     padding: 20px;
-    width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px; /* Control the maximum width */
     margin-top: 20px;
+    margin-left: 20px; /* Align to bottom left */
+    background: #f5f5f5; /* Optional: adds a background color */
 }
 
 .profile-info img {
-    width: 80px;
-    height: auto;
+    width: 180px; /* Adjust if still too large */
+    height: 180px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
 }
 
-.profile-info h3 {
-    margin-top: 10px;
+.info-text {
+    display: flex; /* Corrected property */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.personal-info, .address-info {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column; /* Stack info vertically */
+}
+
+/* Ensure text is properly aligned */
+.personal-info h3, .personal-info p, .address-info p {
+    margin: 4px 0;
+}
+
+/* Adjust the profile-info container to not stretch too wide */
+.profile-info {
+    flex-wrap: wrap; /* Allows items to wrap */
 }
 
 .publications {
@@ -115,4 +148,32 @@ nav ul li a:hover {
     transform: scale(0.8);
     transform-origin: left;
     margin-left: 10px; /* Ensure badges are not too close to the text */
+}
+
+.team-section {
+    margin: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between team member entries */
+    margin-right: 40px; /* Space between team member entries */
+}
+
+.team-member img {
+    border-radius: 50%; /* Creates a round image */
+    width: 350px; /* Adjust based on your preference */
+    height: 350px; /* Keep the same as width for a circle */
+    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    margin-left: 50px; /* Space between image and left border */
+}
+
+.team-member-info h3, .team-member-info h4 {
+    margin: 5px 0; /* Reduces space between the name/role and the description */
+}
+
+.team-member-info p {
+    text-align: justify; /* Optional: Justifies the text for better readability */
 }
