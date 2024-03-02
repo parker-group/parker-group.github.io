@@ -225,3 +225,47 @@ nav ul li a:hover {
 	text-align: center;
     padding: 100px 0;
 }
+
+/* Different header photo for the Posters page */
+.posters-header {
+    background-image: url('images/20151208_110210.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+
+/* Update the h2 color specifically for the Posters page */
+.miscellaneous h2 {
+    color: blue; /* Change from green to blue */
+}
+
+.section-title {
+    clear: both; /* Ensures the title of a new section doesn't overlap with floated elements */
+    margin-top: 20px; /* Adds space above the section title for better separation */
+	margin-left: 20px;
+    color: #000; /* Optional: Style for the section titles */
+}
+
+.misc-item img {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.section-break {
+    clear: both; /* Use this class to clear floats between sections */
+    height: 0; /* Ensures it doesn't add unwanted space */
+}
+
+/* Ensure elements are not jumbled */
+.misc-item {
+    clear: both; /* Fixes issues with floating elements */
+    padding-bottom: 20px; /* Adds space between sections */
+	margin-left: 30px;
+}
