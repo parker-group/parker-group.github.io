@@ -1,4 +1,9 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
 	position: relative;
@@ -17,6 +22,13 @@ header {
 /*    color: white; */
     padding: 100px 0;
 }
+
+footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 
 /* Base styles for images */
 img {
@@ -230,7 +242,7 @@ nav ul li a:hover {
 
 /* Different header photo for the Posters page */
 .posters-header {
-    background-image: url('images/20151208_110210.jpg');
+    background-image: url('images/leaves.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
