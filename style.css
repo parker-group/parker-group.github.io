@@ -1,3 +1,5 @@
+
+
 body {
 	position: relative;
     font-family: Arial, sans-serif;
@@ -288,4 +290,37 @@ nav ul li a:hover {
 	margin-left: 30px;
 	display: flex;
 	align-items: felx-start;
+}
+
+
+.map-detail-header {
+    text-align: center;
+    background-color: transparent;
+    background-image: none; /* Ensures no background image is displayed */
+    padding: 0px; /* Reduces padding to remove unnecessary space */
+    margin: 0px; /* Ensures there's no margin contributing to the gap */
+    color: #000; /* Adjust color as needed */
+    height: auto; /* Adjusts the height to the content inside, removing unnecessary space */
+}
+
+.map-detail-page header,
+.map-detail-page .map-detail-header {
+    padding: 0px 0 !important;
+    margin: 0px 0 !important;
+    min-height: 0 !important; /* Ensures header has minimal height */
+    background-image: none !important; /* Removes any background image */
+    height: auto; /* Adjusts the height to the content */
+}
+
+.map-detail-page header h1 {
+    margin-top: 10px; /* Adjust as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+    padding: 0px 0; /* Minimizes padding around the h1 */
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+.map-detail-page nav {
+    position: static; /* Adjusts nav position to be in the normal document flow */
+    background-color: #fff; /* Sets a specific background color */
+    padding-top: 10px; /* Adds padding to separate nav from the header */
 }
