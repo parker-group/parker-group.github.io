@@ -237,6 +237,23 @@ nav ul li a:hover {
     padding: 100px 0;
 }
 
+.poster-section {
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+.poster-preview,
+.poster-description {
+    margin-right: 20px; /* Adds some space between the iframe and the description */
+}
+
+
+.poster-preview {
+    flex-shrink: 0; /* Prevents the iframe from shrinking */
+}
+
+.poster-description {
+    flex-grow: 1; /* Allows the description to take up remaining space */
+}
 
 /* Update the h2 color specifically for the Posters page */
 .miscellaneous h2 {
@@ -261,6 +278,7 @@ nav ul li a:hover {
 .section-break {
     clear: both; /* Use this class to clear floats between sections */
     height: 0; /* Ensures it doesn't add unwanted space */
+	padding-top: 20px;
 }
 
 /* Ensure elements are not jumbled */
@@ -268,4 +286,6 @@ nav ul li a:hover {
     clear: both; /* Fixes issues with floating elements */
     padding-bottom: 20px; /* Adds space between sections */
 	margin-left: 30px;
+	display: flex;
+	align-items: felx-start;
 }
