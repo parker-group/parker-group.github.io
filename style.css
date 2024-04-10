@@ -136,7 +136,24 @@ nav ul li a:hover {
         width: 75px; /* adjust as needed */
         height: auto; /* maintain aspect ratio */
     }
+    .team-member {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        text-align: center; /* Center-align text */
+    }
+    .team-member img {
+        width: 50%; /* Increase the width of the images */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 200px; /* Optional: You can adjust this value to set a maximum width */
+        margin-bottom: 20px; /* Add some space between the image and the text below it */
+    }
+    .team-member-info {
+        width: 80%; /* Adjust the width of the text to not stretch too wide */
+    }
 }
+
+
+
 
 .info-text {
     display: flex; /* Corrected property */
@@ -215,11 +232,11 @@ nav ul li a:hover {
 .team-member img {
     border-radius: 50%; /* Creates a round image */
     width: 30%; /* Adjust based on your preference */
-    height: 30%; /* Keep the same as width for a circle */
+    height: auto; /* Keep the same as width for a circle */
     object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
     margin-right: 20px; /* Space between image and text */
-    margin-left: 30px; /* Space between image and left border */
-	max-width: 400px;
+/*    margin-left: 30px; /* Space between image and left border */
+/*	max-width: 400px;
 }
 
 .team-member-info h3, .team-member-info h4 {
