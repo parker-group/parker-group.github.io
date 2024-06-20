@@ -116,11 +116,12 @@ nav ul li a:hover {
 .profile-info img {
     width: 180px; /* Adjust if still too large */
     height: 180px;
-    border-radius: 1%;
+    border-radius: 10%;
     object-fit: cover;
     margin-right: 20px;
 }
 
+/* Base styles */
 .emblem {
     width: 300px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
@@ -130,25 +131,35 @@ nav ul li a:hover {
 	z-index: 10; /* Ensure it's above other content */
 }
 
-/* Smaller size for screens narrower than 768px */
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    .team-member img {
+        width: 250px; /* Slightly larger images for larger screens */
+    }
+}
+
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .emblem {
-        width: 75px; /* adjust as needed */
-        height: auto; /* maintain aspect ratio */
+        width: 75px; /* Smaller size for small screens */
+        height: auto;
     }
     .team-member {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center-align items */
         text-align: center; /* Center-align text */
+        margin-right: 0; /* Reset right margin for consistent spacing */
+        margin-bottom: 40px; /* Increase bottom margin for spacing between entries */
     }
     .team-member img {
-        width: 50%; /* Increase the width of the images */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 200px; /* Optional: You can adjust this value to set a maximum width */
-        margin-bottom: 20px; /* Add some space between the image and the text below it */
+        width: 50%; /* Increase size proportionally */
+        max-width: 200px; /* Prevent image from being too small */
+        margin-bottom: 20px; /* Space between the image and text */
+        margin-right: 0; /* Reset right margin */
+        margin-left: 0; /* Reset left margin */
     }
     .team-member-info {
-        width: 80%; /* Adjust the width of the text to not stretch too wide */
+        width: 80%; /* Control text width for better readability */
     }
 }
 
@@ -225,18 +236,51 @@ nav ul li a:hover {
 .team-member {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Space between team member entries */
-    margin-right: 40px; /* Space between team member entries */
+    margin-bottom: 40px; /* Space between team member entries */
+    margin-right: auto; /* Space between team member entries */
+    margin-left: auto; /* Space between team member entries */
+	max-width: 960px;
 }
 
+/* Base styles for team member images */
 .team-member img {
     border-radius: 50%; /* Creates a round image */
-    width: 30%; /* Adjust based on your preference */
-    height: auto; /* Keep the same as width for a circle */
-    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+    width: 180%; /* Default width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area */
     margin-right: 20px; /* Space between image and text */
-/*    margin-left: 30px; /* Space between image and left border */
-/*	max-width: 400px;
+    max-width: 100%; /* Ensures image is not bigger than its container */
+}
+
+.team-member-info {
+    flex: 1; /* Allows the info box to fill the available space */
+    max-width: 1500px; /* Prevents the text box from becoming too wide */
+    padding: 10px; /* Adds some padding inside the text box */
+}
+
+@media (min-width: 768px) {
+    .team-member img {
+        width: 250px; /* Adjust size for larger screens if needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .team-member img {
+        width: 50%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 200px;
+    }
+    .team-member-info {
+        width: 80%;
+    }
 }
 
 .team-member-info h3, .team-member-info h4 {
