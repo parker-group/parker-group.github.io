@@ -17,11 +17,11 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Checkout Personal Repository
-      uses: actions/checkout@v3
-      with:
-        repository: DMParker1/ParkerCV
-        path: personal-repo
-        token: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
+      run: |
+        git clone --depth 1 --filter=blob:none --sparse https://github.com/DMParker1/ParkerCV.git personal-repo
+        cd personal-repo
+        git sparse-checkout init --cone
+        git sparse-checkout set ParkerCV.pdf
 
     - name: List all files in personal repo
       run: ls -laR personal-repo
@@ -37,7 +37,7 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add docs/ParkerCV.pdf
-        git commit -m 'Update CV from personal repository'
+        git commit -m 'Update CV from personal repository' || echo "No changes to commit"
         git push origin master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
