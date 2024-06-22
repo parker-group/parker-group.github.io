@@ -17,13 +17,11 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Checkout Personal Repository
-      env:
-        GITHUB_TOKEN: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
-      run: |
-        git clone --depth 1 --filter=blob:none --sparse https://x-access-token:${GITHUB_TOKEN}@github.com/DMParker1/ParkerCV.git personal-repo
-        cd personal-repo
-        git sparse-checkout init --cone
-        git sparse-checkout set ParkerCV.pdf
+      uses: actions/checkout@v3
+      with:
+        repository: DMParker1/ParkerCV
+        path: personal-repo
+        token: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
 
     - name: List all files in personal repo
       run: ls -laR personal-repo
