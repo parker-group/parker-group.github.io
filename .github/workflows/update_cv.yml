@@ -23,14 +23,11 @@ jobs:
         path: personal-repo
         token: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
 
-    - name: List files in personal repo
-      run: ls -la personal-repo
-
-    - name: List files in personal repo docs
-      run: ls -la personal-repo/docs
+    - name: List all files in personal repo
+      run: ls -laR personal-repo
 
     - name: Copy CV to Organization Repository
-      run: cp personal-repo/docs/ParkerCV.pdf docs/ParkerCV.pdf
+      run: cp personal-repo/ParkerCV.pdf docs/ParkerCV.pdf
 
     - name: List files in organization repo
       run: ls -la docs
