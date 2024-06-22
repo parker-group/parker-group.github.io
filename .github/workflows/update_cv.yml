@@ -10,15 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Setup Node.js 20
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-
     - name: Checkout Organization Repository
       uses: actions/checkout@v3
       with:
-        repository: parker-group/parker-group.github.io
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Checkout Personal Repository
@@ -27,9 +21,13 @@ jobs:
         repository: DMParker1/ParkerCV
         path: personal-repo
         token: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
+        fetch-depth: 1
 
-    - name: List all files in personal repo
-      run: ls -laR personal-repo
+    - name: Sparse Checkout CV
+      run: |
+        git sparse-checkout init --cone
+        git sparse-checkout set ParkerCV.pdf
+      working-directory: personal-repo
 
     - name: Copy CV to Organization Repository
       run: cp personal-repo/ParkerCV.pdf docs/ParkerCV.pdf
