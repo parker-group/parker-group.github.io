@@ -31,6 +31,9 @@ jobs:
     - name: Copy CV to Organization Repository
       run: cp personal-repo/docs/ParkerCV.pdf docs/ParkerCV.pdf
 
+    - name: List files in organization repo
+      run: ls -la docs
+
     - name: Commit and Push Changes
       run: |
         git config --global user.name 'github-actions[bot]'
