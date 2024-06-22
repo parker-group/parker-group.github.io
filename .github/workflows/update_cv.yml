@@ -23,10 +23,11 @@ jobs:
         path: personal-repo
         token: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
 
-    - name: Set up Node.js 20
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+    - name: List files in personal repo
+      run: ls -la personal-repo
+
+    - name: List files in personal repo docs
+      run: ls -la personal-repo/docs
 
     - name: Copy CV to Organization Repository
       run: cp personal-repo/docs/ParkerCV.pdf docs/ParkerCV.pdf
