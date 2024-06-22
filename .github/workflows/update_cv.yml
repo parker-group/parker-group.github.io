@@ -23,10 +23,14 @@ jobs:
         token: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
         fetch-depth: 1
 
-    - name: Sparse Checkout CV
+    - name: Initialize Sparse Checkout
       run: |
         git sparse-checkout init --cone
-        git sparse-checkout set ParkerCV.pdf
+        echo "ParkerCV.pdf" >> .git/info/sparse-checkout
+      working-directory: personal-repo
+
+    - name: Pull Sparse Checkout
+      run: git pull origin main
       working-directory: personal-repo
 
     - name: Copy CV to Organization Repository
