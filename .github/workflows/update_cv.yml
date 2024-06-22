@@ -16,13 +16,13 @@ jobs:
         node-version: '20'
         
     - name: Checkout Organization Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: parker-group/parker-group.github.io
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Checkout Personal Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: DMParker1/ParkerCV
         path: personal-repo
