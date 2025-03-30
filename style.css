@@ -397,3 +397,11 @@ nav ul li a:hover {
     background-color: #fff; /* Sets a specific background color */
     padding-top: 10px; /* Adds padding to separate nav from the header */
 }
+
+.project-overview {
+    padding: 1em 0;
+    border-top: 1px solid #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 3em;
+}
