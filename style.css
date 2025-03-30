@@ -404,8 +404,10 @@ nav ul li a:hover {
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 1.5em;
+    margin-left: 30px; /* <- align with rest of content */
+    margin-right: 30px; /* optional, to keep it balanced */
 }
 
 .project-overview p {
-    max-width: 600px; /* or try 500px, adjust to taste */
+    max-width: 900px; /* or try 500px, adjust to taste */
 }
