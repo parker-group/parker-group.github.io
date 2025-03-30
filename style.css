@@ -405,3 +405,7 @@ nav ul li a:hover {
     line-height: 1.5;
     margin-top: 1.5em;
 }
+
+.project-overview p {
+    max-width: 600px; /* or try 500px, adjust to taste */
+}
