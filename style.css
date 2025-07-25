@@ -223,11 +223,20 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-.altmetric-embed, .__dimensions_badge_embed__, .plumx-plum-print-popup {
-    transform: scale(0.8);
-    transform-origin: left;
-    margin-left: 10px; /* Ensure badges are not too close to the text */
+
+
+.altmetric-embed, .__dimensions_badge_embed__ {
+    width: 80px;  /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    margin-left: 10px; /* Keep this for spacing */
 }
+
+.__dimensions_badge_embed__ {
+    width: 80px;  /* Same size as Altmetric */
+    height: 80px; /* Same size as Altmetric */
+}
+
+
 
 .team-section {
     margin: 20px;
