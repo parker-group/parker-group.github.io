@@ -1,0 +1,50 @@
+name: Update CV from Personal Repository
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This will run the workflow daily at midnight
+  workflow_dispatch:  # This allows the workflow to be triggered manually
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Organization Repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Checkout Personal Repository
+      uses: actions/checkout@v4
+      with:
+        repository: DMParker1/ParkerCV
+        path: personal-repo
+        token: ${{ secrets.PARKER_CV_UPDATE_TOKEN }}
+        fetch-depth: 1
+
+    - name: Initialize Sparse Checkout
+      run: |
+        git sparse-checkout init --cone
+        echo "ParkerCV.pdf" >> .git/info/sparse-checkout
+      working-directory: personal-repo
+
+    - name: Pull Sparse Checkout
+      run: git pull origin main
+      working-directory: personal-repo
+
+    - name: Copy CV to Organization Repository
+      run: cp personal-repo/ParkerCV.pdf docs/ParkerCV.pdf
+
+    - name: List files in organization repo
+      run: ls -la docs
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add docs/ParkerCV.pdf
+        git commit -m 'Update CV from personal repository' || echo "No changes to commit"
+        git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

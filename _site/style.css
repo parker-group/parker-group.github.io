@@ -1,0 +1,6 @@
+
+body { font-family: Arial, sans-serif; }
+header, nav, footer { text-align: center; padding: 1em; }
+nav ul { list-style-type: none; padding: 0; }
+nav ul li { display: inline; margin: 0 10px; }
+nav ul li a { text-decoration: none; }

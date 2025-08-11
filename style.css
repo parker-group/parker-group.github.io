@@ -1,0 +1,422 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('images/20160815_153940.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+/*	background-attachment: fixed; /*this makes the background image stay fixed while you scroll */
+    text-align: center;
+/*    color: white; */
+    padding: 100px 0;
+}
+
+footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Base styles for images */
+img {
+    width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 80vw; /* Adjusts based on viewport width for better mobile layout */
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    header {
+        background-size: cover; /* Ensures the header image covers the area */
+		min-height: 300px; /* Ensures the header remains visually significant */
+		background-attachment: fixed;
+    }
+    img {
+        max-width: 50%; /* Allows images to be larger on desktop screens */
+    }
+}
+
+
+header h1 {
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.what-we-do {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* White background with 40% opacity */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.what-we-do p {
+    margin-bottom: 1em; /* Adds space between paragraphs */
+    text-align: justify; /* Justifies the text for better readability, optional */
+}
+
+.profile-info {
+    display: flex; 
+    align-items: center;
+    padding: 2px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: auto;
+	max-width: 660px; /* Control the maximum width */
+    margin: 5px;
+    background: #f5f5f5; /* Optional: adds a background color */
+	position: relative; 
+	bottom: 0;
+	left: 0;
+}
+
+.profile-info img {
+    width: 180px; /* Adjust if still too large */
+    height: 180px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Base styles */
+.emblem {
+    width: 300px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; 
+    bottom: 2px; /* Distance from bottom */
+    right: 2px; /* Distance from right, adjust as needed */
+	z-index: 10; /* Ensure it's above other content */
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    .team-member img {
+        width: 250px; /* Slightly larger images for larger screens */
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .emblem {
+        width: 75px; /* Smaller size for small screens */
+        height: auto;
+    }
+    .team-member {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        text-align: center; /* Center-align text */
+        margin-right: 0; /* Reset right margin for consistent spacing */
+        margin-bottom: 40px; /* Increase bottom margin for spacing between entries */
+    }
+    .team-member img {
+        width: 50%; /* Increase size proportionally */
+        max-width: 200px; /* Prevent image from being too small */
+        margin-bottom: 20px; /* Space between the image and text */
+        margin-right: 0; /* Reset right margin */
+        margin-left: 0; /* Reset left margin */
+    }
+    .team-member-info {
+        width: 80%; /* Control text width for better readability */
+    }
+}
+
+
+
+
+.info-text {
+    display: flex; /* Corrected property */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.personal-info, .address-info {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column; /* Stack info vertically */
+}
+
+/* Ensure text is properly aligned */
+.personal-info h3, .personal-info p, .address-info p {
+    margin: 4px 0;
+}
+
+/* Adjust the profile-info container to not stretch too wide */
+.profile-info {
+    flex-wrap: wrap; /* Allows items to wrap */
+}
+
+.publications {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.publications h2 {
+    font-size: 1.5em;
+    color: green;
+}
+
+.publications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.publications li {
+    margin-bottom: 10px;
+}
+
+.publications li .publication {
+    display: flex;
+    align-items: center;
+}
+
+.publications li .publication p {
+    margin-right: 20px;
+}
+
+.publications li .publication a {
+    color: darkblue;
+}
+
+.publications li .publication a:hover {
+    text-decoration: underline;
+}
+
+
+
+.altmetric-embed, .__dimensions_badge_embed__ {
+    width: 80px;  /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    margin-left: 10px; /* Keep this for spacing */
+}
+
+.__dimensions_badge_embed__ {
+    width: 80px;  /* Same size as Altmetric */
+    height: 80px; /* Same size as Altmetric */
+}
+
+
+
+.team-section {
+    margin: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; /* Space between team member entries */
+    margin-right: auto; /* Space between team member entries */
+    margin-left: auto; /* Space between team member entries */
+	max-width: 960px;
+}
+
+/* Base styles for team member images */
+.team-member img {
+    border-radius: 50%; /* Creates a round image */
+    width: 180%; /* Default width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area */
+    margin-right: 20px; /* Space between image and text */
+    max-width: 100%; /* Ensures image is not bigger than its container */
+}
+
+.team-member-info {
+    flex: 1; /* Allows the info box to fill the available space */
+    max-width: 1500px; /* Prevents the text box from becoming too wide */
+    padding: 10px; /* Adds some padding inside the text box */
+}
+
+@media (min-width: 768px) {
+    .team-member img {
+        width: 250px; /* Adjust size for larger screens if needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .team-member img {
+        width: 50%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 200px;
+    }
+    .team-member-info {
+        width: 80%;
+    }
+}
+
+.team-member-info h3, .team-member-info h4 {
+    margin: 5px 0; /* Reduces space between the name/role and the description */
+}
+
+.team-member-info p {
+    text-align: justify; /* Optional: Justifies the text for better readability */
+}
+
+.people-header {
+    background-image: url('images/P_20170218_092844.jpg'); /* Update with the correct path */
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+	text-align: center;
+    padding: 100px 0;
+}
+
+/* Different header photo for the Posters page */
+.posters-header {
+    background-image: url('images/leaves.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.poster-section {
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+.poster-preview,
+.poster-description {
+    margin-right: 20px; /* Adds some space between the iframe and the description */
+}
+
+
+.poster-preview {
+    flex-shrink: 0; /* Prevents the iframe from shrinking */
+}
+
+.poster-description {
+    flex-grow: 1; /* Allows the description to take up remaining space */
+}
+
+/* Update the h2 color specifically for the Posters page */
+.miscellaneous h2 {
+    color: blue; /* Change from green to blue */
+}
+
+.section-title {
+    clear: both; /* Ensures the title of a new section doesn't overlap with floated elements */
+    margin-top: 20px; /* Adds space above the section title for better separation */
+	margin-left: 20px;
+    color: #000; /* Optional: Style for the section titles */
+}
+
+.misc-item img {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.section-break {
+    clear: both; /* Use this class to clear floats between sections */
+    height: 0; /* Ensures it doesn't add unwanted space */
+	padding-top: 20px;
+}
+
+/* Ensure elements are not jumbled */
+.misc-item {
+    clear: both; /* Fixes issues with floating elements */
+    padding-bottom: 20px; /* Adds space between sections */
+	margin-left: 30px;
+	display: flex;
+	align-items: felx-start;
+}
+
+
+.map-detail-header {
+    text-align: center;
+    background-color: transparent;
+    background-image: none; /* Ensures no background image is displayed */
+    padding: 0px; /* Reduces padding to remove unnecessary space */
+    margin: 0px; /* Ensures there's no margin contributing to the gap */
+    color: #000; /* Adjust color as needed */
+    height: auto; /* Adjusts the height to the content inside, removing unnecessary space */
+}
+
+.map-detail-page header,
+.map-detail-page .map-detail-header {
+    padding: 0px 0 !important;
+    margin: 0px 0 !important;
+    min-height: 0 !important; /* Ensures header has minimal height */
+    background-image: none !important; /* Removes any background image */
+    height: auto; /* Adjusts the height to the content */
+}
+
+.map-detail-page header h1 {
+    margin-top: 10px; /* Adjust as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+    padding: 0px 0; /* Minimizes padding around the h1 */
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+.map-detail-page nav {
+    position: static; /* Adjusts nav position to be in the normal document flow */
+    background-color: #fff; /* Sets a specific background color */
+    padding-top: 10px; /* Adds padding to separate nav from the header */
+}
+
+.project-overview {
+    padding: 1em 0;
+    border-top: 1px solid #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1.5em;
+    margin-left: 30px; /* <- align with rest of content */
+    margin-right: 30px; /* optional, to keep it balanced */
+}
+
+.project-overview p {
+    max-width: 900px; /* or try 500px, adjust to taste */
+}
