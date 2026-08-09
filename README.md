@@ -1,6 +1,6 @@
 # Parker Group Website Repository
 
-This repo contains the **statically generated** public website for the Parker Group, served at:
+This repository contains the public website for the Parker Group:
 ➡️ **https://parker-group.github.io/**
 
 ---
