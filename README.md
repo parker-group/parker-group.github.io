@@ -18,9 +18,10 @@ This repo contains the **statically generated** public website for the Parker Gr
 ---
 
 ## External Resources
-- For research, code, and spatial epidemiology projects, visit: **[Parker Group GitHub Organization](https://github.com/parker-group)**
-- Or explore the **[Spatial Epidemiology Hub](https://github.com/DMParker1/spatial-epidemiology-hub)** for how the group leader's (DM Parker) projects are somehow all connected.
+
+- For research, code, and spatial epidemiology projects, visit the [Parker Group GitHub Organization](https://github.com/parker-group).
+- Explore Daniel M. Parker's [Research Atlas](https://github.com/DMParker1/research-atlas), which connects research projects across places, questions, and methodological approaches.
 
 ---
 
-*Maintained by the Parker Group*
+Maintained by the Parker Group
